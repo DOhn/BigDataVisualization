@@ -1,165 +1,214 @@
 <html>
 
 <head>
-    <title>Team Selene</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Team Selene</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
 
-    <link href="style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+  <script>
+    $(document).ready(function() {
+      $('.scrollspy').scrollSpy();
+    });
+ );
+  </script>
+
 </head>
 
 <body>
-    <div id='stars'></div>
-    <div id='stars2'></div>
-    <div id='star3'></div>
+    <div class="navbar-fixed">
+        <nav class=nav-center role="navigation">
+        <ul class="section table-of-contents">
+          <li><a href="#project" style="color: #F0FFFF;">Project</a></li>
+          <li><a href="#requirements" style="color: #F0FFFF;">Requirements</a></li>
+          <li><a href="#architecture" style="color: #F0FFFF;">Architecture</a></li>
+          <li><a href="#technologies" style="color: #F0FFFF;">Technologies</a></li>
+          <li><a href="#team" style="color: #F0FFFF;">Team</a></li>
+          <li><a href="#documentation" style="color: #F0FFFF;">Documentation</a></li>
 
-    <div class="home">
-
-        <h1>Team Selene</h1>
-        <h3>Web Visualization of High Dimensionality Spatial Data</h3>
-        <h5 class='date'>Fall 2016 - Spring 2017</h5> <br></br>
-
-        <h3 class='project'>Project Details</h3>
-
-        <p class='white-font'>The Japanese Aerospace Exploration Agency’s (JAXA) “KAGUYA (SELENE)” carrying the Spectral Profiler (SP) collected hyperspectral observations of the Moon’s surface. This dataset collected contains roughly ~68 million individual spatially aware
-            points with each point containing associated metadata. This data can be used for various science applications and could improve our understanding of surface properties. KAGUYA data archive is maintained by JAXA, which is a critical tool for
-            SP data access, but accessing the data this method suffers from three major issues.</p>
-        <p>
-            <li class='white-font'>Results are served such that products are aggregated by image.</li>
-            <li class='white-font'>Current existing mechanisms do not support based spatial search.</li>
-            <li class='white-font'> Results are offered as paginated, individual downloads which makes the collection of data over larger spatial extents problematic.
-            </li>
-        </p>
-        <p class='white-font'>We seek to address these major issues by creating a multilayer (web stack) application for the delivery, visualization, and exploratory analysis of the KAGUYA SP dataset.
-        </p>
-
-        <br></br>
-        <h3 class='project'>High Level Requirements</h3>
-        <p class='white-font'>In order to assess the scientist’s needs of using the dataset, our team discussed with our clients the workflow when they are using the dataset.  Our clients have pointed out various challenges and requirements, along with expressing their ideas for improving the workflow of the dataset.</p>
-        <p>
-          <li class="white-font">Responsive</li>
-          <li class="white-font">Reliable</li>
-          <li class="white-font">Interactive</li>
-          <li class="white-font">Allow for Data Visualization and Analysis (Globally and Locally)</li>
-
-        </p>
-        <p class='white-font'>These are the main requirements that our final web application will be judged and graded upon with our clients and mentor.</p>
-
-
-        <br></br>
-        <h3 class='project'>The Team</h3>
-        <p class='white-font'>
-            Team Selene is made up of computer science students and software engineers from Northern Arizona University. We will be working together over the course of the next year to design, develop, and deploy a web application for visualization of high density
-            spatial data for the United States Geological Survey. Read below our individual bio's.
-        </p>
+        </ul>
+      </nav>
+      <!-- </div> -->
     </div>
 
+  <div id='stars'></div>
+  <div id='stars2'></div>
+
+  <div class="home">
+
+    <h1>Team Selene</h1>
+    <h3>Web Visualization of High Dimensionality Spatial Data</h3>
+    <h5 class='date' id='project'>Fall 2016 - Spring 2017</h5> <br></br>
+
+    <h3 class='project'>Project Details</h3>
+
+    <p class='white-font'>The Japanese Aerospace Exploration Agency’s (JAXA) “KAGUYA (SELENE)” carrying the Spectral Profiler (SP) collected hyperspectral observations of the Moon’s surface. This dataset collected contains roughly ~68 million individual spatially aware points
+      with each point containing associated metadata. This data can be used for various science applications and could improve our understanding of surface properties. KAGUYA data archive is maintained by JAXA, which is a critical tool for SP data access,
+      but accessing the data this method suffers from three major issues.</p>
+    <p>
+      <li class='white-font'>Results are served such that products are aggregated by image.</li>
+      <li class='white-font'>Current existing mechanisms do not support based spatial search.</li>
+      <li class='white-font'> Results are offered as paginated, individual downloads which makes the collection of data over larger spatial extents problematic.
+      </li>
+    </p>
+    <p class='white-font'>We seek to address these major issues by creating a multilayer (web stack) application for the delivery, visualization, and exploratory analysis of the KAGUYA SP dataset.
+    </p>
+
+    <div id='requirements'></div>
+    <br></br>
+    <h3 class='project'>High Level Requirements</h3>
+    <p class='white-font'>In order to assess the scientist’s needs of using the dataset, our team discussed with our clients the workflow when they are using the dataset. Our clients have pointed out various challenges and requirements, along with expressing their ideas for
+      improving the workflow of the dataset.</p>
+    <p>
+      <li class="white-font">Responsive</li>
+      <li class="white-font">Reliable</li>
+      <li class="white-font">Interactive</li>
+      <li class="white-font">Allow for Data Visualization and Analysis (Globally and Locally)</li>
+
+    </p>
+    <p class='white-font'>These are the main requirements that our final web application will be judged and graded upon with our clients and mentor.</p>
+
+    <div id='architecture'></div>
+    <br></br>
+    <h3 class="project">Architecture</h3>
+    <img class="architecture" src="img/graph.png" width='800' height='300'>
 
 
-    <div class="container">
-        <div class="col s5 m6">
+    <div id='technologies'></div>
+    <br></br>
 
-            <div class="z-depth-2">
-                <div class="card horizontal">
-                    <div class="card-image">
-                        <img src="img/zowieProf.jpg">
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <h5>Zowie Haugaard</h5>
-                            <p class='white-font'>
-                                I'm a student and free-lance web developer. I have explored topics such as game development, web applications, and graphics techniques. I also have experience building custom web 2.0 sites and database management. This year I am excited to also be working
-                                with the NAU Department of Astronomy to develop a thermal infrared imaging system for the on-campus telescope. When not working as a software developer, I'm an Apple Certified Macintosh Technician and an avid musician,
-                                mountain biker, snowboarder, and surfer.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <h3 class="project">Technologies</h3>
+    <a href="https://www.mongodb.com/">
+      <img class="mongodb" src="img/mongodb.png" width='213' height='242'>
+    </a>
+    <a href="https://nodejs.org/en/">
+      <img class="nodejs" src="img/nodejs.png" width='250' height='250'>
+    </a>
+    <a href="http://geoserver.org/">
+      <img class="geoserver" src="img/geoserver.png" width='200' height='200'>
+    </a>
+    <a href="http://leafletjs.com/">
+      <img class="leaflet" src="img/leaflet.png" width='213' height='242'>
+    </a>
 
+    <div id='team'></div>
+    <br></br>
 
-            <div class="z-depth-2">
-                <div class="card horizontal">
-                    <div class="card-image">
-                        <img src="img/makayla.jpg">
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <h5>Makayla Shepherd</h5>
-                            <p class='white-font'>
-                                I have been working with the USGS Astrogeology for over a year and a half developing image processing software. I primarily develop in C++, but I have experience in Bash, Python, Java, and MATLAB. I enjoy pina coladas and getting caught in the rain. I
-                                am not into yoga, but I do have half of a brain.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <h3 class='project' >The Team</h3>
+    <p class='white-font'>
+      Team Selene is made up of computer science students and software engineers from Northern Arizona University. We will be working together over the course of the next year to design, develop, and deploy a web application for visualization of high density
+      spatial data for the United States Geological Survey. Read below our individual bio's.
+    </p>
+  </div>
 
 
-            <div class="z-depth-2">
-                <div class="card horizontal">
-                    <div class="card-image">
-                        <img src="img/kelvin.jpg">
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <h5>Kelvin Rodriguez</h5>
-                            <p class='white-font'>
-                                I have previously worked for the USDA-ARS Arid Land Agricultural Research Center (ALARC) where I created high throughput phenotyping tools written in C++ for fast and reliable computation of crop features extracted from millions of LiDAR points and stored
-                                in a geospatial database as part of ALARC’s water management and remote sensing team. My passion lies in solving difficult problems. Not necessarily problems only new to me, but particularly open problems that I may have
-                                a chance at solving. Interests: Computer Graphics, Computer Vision, Unicorns, Computer Learning, Simulations, and Data Science.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+  <div class="container">
+    <div class="col s5 m6">
 
-            <div class="z-depth-2">
-                <div class="card horizontal">
-                    <div class="card-image">
-                        <img src="img/dan.jpg">
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <H5>Daniel Ohn</H5>
-                            <p>
-                                I'm an undergraduate at Northern Arizona Unversity getting my bachelor's degree in Computer Science. Currently I'm a FYLI Peer TA for CS110, President of ACM, and a proud owner of a dwarf hamster named Bromar. I'm experienced in web development with web
-                                frameworks, such as Django, Meteor, and Ruby on Rails. Along with various databases, such as PostgresSQL, MySQL, and MongoDB.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="z-depth-2">
-                <div class="card horizontal">
-                    <div class="card-image">
-                        <img src="img/chris.jpg">
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <H5>Christopher Philabaum</H5>
-                            <p class='white-font'>
-                                My name is Christopher Philabaum. I am a student at Northern Arizona University studying as an undergraduate in Computer Science. This is my senior year, and I'm currently also doing research under Dr. Viacheslav Fofanov for Bioinformatics and Dr. Bertrand
-                                Cambou for Practical Cybersecurity. My plan is to continue on my academics in graduate school, to place my focus on Comptuer Science (potentially artificial intelligence, theoretical computer science, and/or quantum computing).
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-          <div class="home">
-            <h3 class="project">Documentation</h3>
-            <h4 class="doc"><a href="files/SoftwareDesignDocument.pdf">Design Documentation</a></h4>
-            <h4 class="doc"><a href="files/RequirementsSpecificationFinalDraft.pdf">Requirement Specification</a></h4>
-            <h4 class="doc"><a href="files/DesignReview3.pdf">Design Review</a></h4>
-            <h4 class="doc"><a href="files/SoftwareTestingPlan.pdf">Software Testing Plan</a></h4>
-
+      <div class="z-depth-2">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="img/zowieProf.jpg">
           </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5>Zowie Haugaard</h5>
+              <p class='white-font'>
+                I'm a student and free-lance web developer. I have explored topics such as game development, web applications, and graphics techniques. I also have experience building custom web 2.0 sites and database management. This year I am excited to also be working
+                with the NAU Department of Astronomy to develop a thermal infrared imaging system for the on-campus telescope. When not working as a software developer, I'm an Apple Certified Macintosh Technician and an avid musician, mountain biker,
+                snowboarder, and surfer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="z-depth-2">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="img/makayla.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5>Makayla Shepherd</h5>
+              <p class='white-font'>
+                I have been working with the USGS Astrogeology for over a year and a half developing image processing software. I primarily develop in C++, but I have experience in Bash, Python, Java, and MATLAB. I enjoy pina coladas and getting caught in the rain. I
+                am not into yoga, but I do have half of a brain.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="z-depth-2">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="img/kelvin.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <h5>Kelvin Rodriguez</h5>
+              <p class='white-font'>
+                I have previously worked for the USDA-ARS Arid Land Agricultural Research Center (ALARC) where I created high throughput phenotyping tools written in C++ for fast and reliable computation of crop features extracted from millions of LiDAR points and stored
+                in a geospatial database as part of ALARC’s water management and remote sensing team. My passion lies in solving difficult problems. Not necessarily problems only new to me, but particularly open problems that I may have a chance at solving.
+                Interests: Computer Graphics, Computer Vision, Unicorns, Computer Learning, Simulations, and Data Science.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="z-depth-2">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="img/dan.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <H5>Daniel Ohn</H5>
+              <p>
+                I'm an undergraduate at Northern Arizona Unversity getting my bachelor's degree in Computer Science. Currently I'm a FYLI Peer TA for CS110, President of ACM, and a proud owner of a dwarf hamster named Bromar. I'm experienced in web development with web
+                frameworks, such as Django, Meteor, and Ruby on Rails. Along with various databases, such as PostgresSQL, MySQL, and MongoDB.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="z-depth-2">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="img/chris.jpg">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <H5>Christopher Philabaum</H5>
+              <p class='white-font'>
+                My name is Christopher Philabaum. I am a student at Northern Arizona University studying as an undergraduate in Computer Science. This is my senior year, and I'm currently also doing research under Dr. Viacheslav Fofanov for Bioinformatics and Dr. Bertrand
+                Cambou for Practical Cybersecurity. My plan is to continue on my academics in graduate school, to place my focus on Comptuer Science (potentially artificial intelligence, theoretical computer science, and/or quantum computing).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div id='documentation'></div> -->
+
+      <div class="home" id="documentation">
+        <h3 class="project">Documentation</h3>
+        <h4 class="doc"><a href="files/SoftwareDesignDocument.pdf">Design Documentation</a></h4>
+        <h4 class="doc"><a href="files/RequirementsSpecificationFinalDraft.pdf">Requirement Specification</a></h4>
+        <h4 class="doc"><a href="files/DesignReview3.pdf">Design Review</a></h4>
+        <h4 class="doc"><a href="files/SoftwareTestingPlan.pdf">Software Testing Plan</a></h4>
+
+      </div>
 
 </html>
 
